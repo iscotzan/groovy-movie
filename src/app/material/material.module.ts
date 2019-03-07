@@ -4,7 +4,7 @@ import {
   MatButtonModule, MatCardModule, MatChipsModule, MatIconModule, MatInputModule, MatListModule, MatSidenavModule,
   MatTabsModule,
   MatToolbarModule, MatTooltipModule, MatPaginatorModule, MatMenuModule, MatDialogModule, MatSliderModule,
-  MatExpansionModule, MatAutocompleteModule, MatGridListModule
+  MatExpansionModule, MatAutocompleteModule, MatGridListModule, MatProgressSpinnerModule
 } from '@angular/material';
 
 
@@ -13,7 +13,7 @@ const angularMaterialModules = [
   MatTabsModule,
   MatToolbarModule, MatTooltipModule, MatPaginatorModule, MatMenuModule, MatDialogModule, MatSliderModule,
   MatExpansionModule,
-  MatAutocompleteModule, MatGridListModule
+  MatAutocompleteModule, MatGridListModule, MatProgressSpinnerModule
 ]
 
 @NgModule({

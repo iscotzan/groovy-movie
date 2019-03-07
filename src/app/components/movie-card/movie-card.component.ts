@@ -22,5 +22,6 @@ export class MovieCardComponent implements OnInit {
     this.poster_url = this.poster_base_url + this.poster_path;
     this.movieDetailsRoute = route_paths.detailsPage + this.id;
     this.overview = this.overview.substring(0, 200).split(' ').slice(0, -1).join(' ') + '...';
+
   }
 }

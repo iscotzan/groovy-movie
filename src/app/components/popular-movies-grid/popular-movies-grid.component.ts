@@ -10,7 +10,7 @@ import { route_paths } from './../../app-routing-paths.dict';
   styleUrls: ['./popular-movies-grid.component.scss']
 })
 export class PopularMoviesGridComponent implements OnInit {
-
+  loading: boolean = true;
   pageNum: number = 1;
   completePopularMoviesList: Array<PaginatorModel> = [];
   filteredPopularMoviesList: Array<PaginatorModel> = [];
@@ -24,15 +24,18 @@ export class PopularMoviesGridComponent implements OnInit {
     this.getPopularMovies(1);
   }
   getPopularMovies(page: number = 1) {
+    this.loading = true;
     this.apiService.getPopular(page).subscribe(res => {
       console.log('got popular movies page ', page, ': ', res.results);
       this.completePopularMoviesList.push(...res.results)
       this.completePopularMoviesList.forEach(np => np['isMovie'] = true);
       page === 1 ? this.filteredPopularMoviesList = this.completePopularMoviesList : this.filteredPopularMoviesList;
+      this.loading = false;
     });
   }
-  onScrollDown() {
+  onScrollDown(event) {
     // console.log('scrolled down!');
+    // console.log(event)
     this.pageNum++;
     this.getPopularMovies(this.pageNum);
   }

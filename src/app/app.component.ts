@@ -1,5 +1,6 @@
 import { Component, Inject, PLATFORM_ID, APP_ID } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from "@angular/common";
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,11 +15,20 @@ export class AppComponent {
 
   constructor(
     public router: Router,
+    private location: Location,
     @Inject(PLATFORM_ID) private platformId: any,
     @Inject(APP_ID) private appId: string
-  ) { }
-  scrollToTop() {
-    console.log('scroll to top!');
+  ) {
   }
+  scrollToTop() {
+    console.log('top from mat-drawer-content: ', document.getElementsByClassName('mat-drawer-content')[0].scrollTop);
+    document.getElementsByClassName('mat-drawer-content')[0].scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+
+  }
+
 
 }
