@@ -1,7 +1,14 @@
 # GroovyMovie 🎥
+
+[# Demo](https://groovy-movie.firebaseapp.com/)
+
 Angular 7 Demo App implementing themoviedb.org API 
 
-[Demo](https://groovy-movie.firebaseapp.com/)
+## Installing
+
+- `git clone`
+- `npm install`
+- ###Enter your own themoviedb.org apiKey 🔑 in `src/app/credentials.ts`###
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4.
 

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { credentials } from './../../credentials';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) {
     this.baseUrl = 'https://api.themoviedb.org/3/';
-    this.apiKey = '1fc329ab368dd059101d086bd553ae99';
+    this.apiKey = credentials.theMovieDbApiKey;
     this.language = 'en-US';
     this.region = 'US'
   }
