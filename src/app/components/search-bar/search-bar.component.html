@@ -1,0 +1,22 @@
+<form fxLayoutAlign="center center">
+  <mat-form-field class="search-bar" appearance="outline" [style]="searchbarWidth">
+    <mat-chip-list #chipList>
+      <mat-chip style="margin-top:0.4em;" *ngFor="let option of autoCompleteService.searchOption" (removed)="removeOption(option)">
+
+        <span>{{option.title}}</span>
+
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <input type="text" placeholder="Search..." class="field" #autocompleteInput type="text" placeholder="Search"
+        aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto" [matChipInputFor]="chipList" />
+      <mat-icon matSuffix>search</mat-icon>
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngFor="let option of autoCompleteList" [value]="option" (onSelectionChange)="filterPostList($event)">
+          {{option.title}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-chip-list>
+
+  </mat-form-field>
+
+</form>

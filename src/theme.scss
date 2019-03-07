@@ -1,0 +1,48 @@
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Libre Franklin'
+);
+@include mat-core($custom-typography);
+
+$my-app-primary: mat-palette($mat-blue-grey, 900, 600);
+$my-app-accent:  mat-palette($mat-green, 900, 500);
+// $my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+$my-app-warn:    mat-palette($mat-deep-orange);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-green);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+
+  @include angular-material-theme($alternate-theme);
+}
+// @import '~@angular/material/theming';
+$vardemo: '#000';
+// // Define the palettes for your theme using the Material Design palettes available in palette.scss
+// // (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// // hue. Available color palettes: https://material.io/design/color/
+// $groovy-movie-app-primary: mat-palette($mat-blue-grey);
+// $groovy-movie-app-secondary: mat-palette($mat-green);
+// // $groovy-movie-app-surface: mat-color(#FAFAFA);
+// // $groovy-movie-app-light: mat-color(#FFFFFF);
+// // $groovy-movie-app-dark: mat-color(#EEEEEE);
+// // $groovy-movie-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+// // The warn palette is optional (defaults to red).
+// // $groovy-movie-app-warn:    mat-palette($mat-red);
+
+// // Create the theme object (a Sass map containing all of the palettes).
+// // $groovy-movie-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+// $groovy-movie-app-theme: mat-light-theme($groovy-movie-app-primary, $groovy-movie-app-secondary
+// );
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include angular-material-theme($groovy-movie-app-theme);

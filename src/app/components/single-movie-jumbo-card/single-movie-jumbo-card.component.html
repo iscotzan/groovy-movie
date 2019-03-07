@@ -1,0 +1,48 @@
+<mat-card class="jumbo-movie-card" color="primary">
+  <mat-grid-list cols="5" rowHeight="80">
+    <mat-grid-tile [colspan]="1" [rowspan]="5">
+      <div class="jumbo-movie-card-poster">
+        <img mat-card-image [src]="poster_url" [alt]="title">
+      </div>
+    </mat-grid-tile>
+    <div class="jumbo-movie-card-content">
+
+      <mat-grid-tile [colspan]="4" [rowspan]="1">
+        <mat-card-header class="jumbo-movie-card-title" fxFlex fxLayoutAlign="start start">
+          <mat-card-title>
+            <h1>
+              {{title}}
+            </h1>
+          </mat-card-title>
+        </mat-card-header>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="4" [rowspan]="1" class="jumbo-movie-card-icon-group">
+        <div fxFlex fxLayoutAlign="start center">
+          <button mat-fab color="accent">
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+          </button>
+          <button mat-fab color="accent">
+            <mat-icon aria-label="Example icon-button with a heart icon">share</mat-icon>
+          </button>
+          <button mat-fab color="accent">
+            <mat-icon aria-label="Example icon-button with a heart icon">access_time</mat-icon>
+          </button>
+
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]="4" [rowspan]="2">
+        <div fxFlex fxLayoutAlign="start start">
+          <div>
+            <h2 class="jumbo-movie-card-overview-text">
+              Overview
+            </h2>
+            <p class="jumbo-movie-card-overview-text">
+              {{overview}}
+            </p>
+
+          </div>
+        </div>
+      </mat-grid-tile>
+    </div>
+  </mat-grid-list>
+</mat-card>

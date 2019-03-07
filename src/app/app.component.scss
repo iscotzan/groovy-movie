@@ -1,0 +1,63 @@
+@import './../variables';
+
+
+#appWrap {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.2em;
+  //   font-weight: 800;
+}
+
+.app-toolbar {
+  position: sticky;
+  position: -webkit-sticky;
+  /* For macOS/iOS Safari */
+  top: 0;
+  /* Sets the sticky toolbar to be on top */
+  z-index: 1000;
+  /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.docs-footer {
+  background: $background-dark;
+
+  .docs-footer-copyright {
+    margin-right: 2em;
+  }
+}
+
+.scroll-to-top {
+  // position: sticky;
+  // position: -webkit-sticky; /* For macOS/iOS Safari */
+  // top: 30px; /* Sets the sticky toolbar to be on top */
+  // z-index: 1001; /* Ensure that your app's content doesn't overlap the toolbar */
+  // // bottom: 15px;
+  // background: red;
+  opacity: 0.2;
+  transition: all .2s ease-in-out;
+  // display: none; /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  // border: none; /* Remove borders */
+  // outline: none; /* Remove outline */
+  background-color: $accent-light;
+  /* Set a background color */
+  color: $text-light;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  // padding: 15px; /* Some padding */
+  // border-radius: 10px; /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+}
+
+.show-scroll {
+  opacity: 1;
+  transition: all .2s ease-in-out;
+}

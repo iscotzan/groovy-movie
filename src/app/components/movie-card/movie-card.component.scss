@@ -1,0 +1,22 @@
+@import "'./../../../../_variables.scss";
+
+
+.movie-card {
+  max-width: 90%;
+  height: 21em;
+  margin-bottom: 2em;
+  background: $background-surface;
+}
+
+.movie-card-poster {
+  object-fit: cover;
+  height: 12.5em;
+  
+}
+
+.movie-description {
+  height: 6.5em;
+  padding: 10px;
+  width: 30em;
+  text-align: left;
+}

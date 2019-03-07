@@ -1,0 +1,11 @@
+<mat-card class="movie-card" (click)="router.navigate([movieDetailsRoute])">
+  <img mat-card-image class="movie-card-poster" [src]="poster_url" [alt]="title">
+    <mat-card-header>
+      <mat-card-title>{{title}}</mat-card-title>
+    </mat-card-header>
+  <mat-card-content class="movie-description">
+    
+     {{overview}}
+    
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,43 @@
+@import "'./../../../../_variables.scss";
+
+
+.jumbo-movie-card {
+  //   background: #455A64;
+  background: $secondary;
+  color: $text-light;
+  padding: 2em 1em 1em 1em;
+
+  /* needed styles below */
+  //   display: flex;
+  //   justify-content: flex-start;
+  .jumbo-movie-card-icon-group button {
+    margin-left: 1.5em;
+    background: $accent-light;
+  }
+
+  .jumbo-movie-card-overview-section {
+    color: $text-light
+  }
+
+  .jumbo-movie-card-poster {
+    img {
+      width: 80%;
+      border-radius: 3px;
+      background-color: transparent;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  }
+
+  .jumbo-movie-card-overview-text {
+    text-align: left;
+    // margin-top: -5em;
+    padding-right: 3em;
+  }
+
+}
+
+
+// .mat-grid-tile .mat-figure {
+//   align-items: center;
+//   justify-content: flex-start;
+// }
