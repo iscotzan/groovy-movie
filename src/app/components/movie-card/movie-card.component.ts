@@ -24,4 +24,12 @@ export class MovieCardComponent implements OnInit {
     this.overview = this.overview.substring(0, 200).split(' ').slice(0, -1).join(' ') + '...';
 
   }
+  movieSelected() {
+    this.router.navigate([this.movieDetailsRoute])
+    document.getElementsByClassName('mat-drawer-content')[0].scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'auto'
+    })
+  }
 }
