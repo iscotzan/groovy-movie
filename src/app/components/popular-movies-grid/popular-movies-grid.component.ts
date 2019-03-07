@@ -54,4 +54,5 @@ export class PopularMoviesGridComponent implements OnInit {
     };
     return;
   }
+
 }

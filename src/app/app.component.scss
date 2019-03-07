@@ -33,7 +33,6 @@
   // // bottom: 15px;
   // background: red;
   opacity: 0.2;
-  transition: all .2s ease-in-out;
   // display: none; /* Hidden by default */
   position: fixed;
   /* Fixed/sticky position */
@@ -54,10 +53,15 @@
   // padding: 15px; /* Some padding */
   // border-radius: 10px; /* Rounded corners */
   font-size: 18px;
+  transition: all .25s ease-in-out;
   /* Increase font size */
+  &:hover{
+    opacity: 0.8;
+    transition: all .25s ease-in-out;
+  }
 }
 
 .show-scroll {
   opacity: 1;
-  transition: all .2s ease-in-out;
+  transition: all .25s ease-in-out;
 }
