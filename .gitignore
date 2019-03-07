@@ -37,8 +37,8 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-credentials_ignore.ts
-
+credentials_ignore.js
+**/credentials_ignore.js
 # System Files
 .DS_Store
 Thumbs.db
