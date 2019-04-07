@@ -13,16 +13,17 @@
         <a mat-list-item routerLink="/" routerLinkActive="active" (click)="start.close()">Home</a>
         <a mat-list-item routerLink="/movie-details/exampleMovieName" routerLinkActive="active" (click)="start.close()">details
           page</a>
+        <a mat-list-item routerLink="/watchlist" (click)="start.close()">watchlist (todo)</a>
 
       </mat-nav-list>
     </mat-sidenav>
 
     <mat-toolbar class="app-toolbar" color="primary">
       <!-- <button mat-icon-button (click)="start.open()" aria-label="Menu"> -->
-      <button *ngIf="router.url === '/'" mat-icon-button aria-label="Menu">
+      <button *ngIf="router.url === '/'" mat-icon-button aria-label="Menu" (click)="start.open()">
         <mat-icon>menu</mat-icon>
       </button>
-      <button *ngIf="router.url !== '/'" mat-icon-button aria-label="Go Back" routerLink="/">
+      <button *ngIf="router.url !== '/'" mat-icon-button aria-label="Go Back" routerLink="/" (click)="start.open()">
         <mat-icon>arrow_backward</mat-icon>
       </button>
       <!-- <button [ngClass]="{'show-scroll': showScroll}" (click)="scrollToTop()" mat-fab color="accent-light" class="scroll-to-top" [ngStyle]="fadeIn">

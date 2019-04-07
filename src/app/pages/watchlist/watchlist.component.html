@@ -1,0 +1,11 @@
+<div>
+
+  <app-add-watch-item (addTodo)="addTodo($event)"></app-add-watch-item>
+  <app-watch-item 
+  *ngFor="let todo of todos" [todo]='todo'
+  (deleteTodoEmitter)="deleteTodo($event)"
+  (editTodoEmitter)="editTodo($event)"
+  >
+</app-watch-item>
+
+</div>

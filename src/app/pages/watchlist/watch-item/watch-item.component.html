@@ -1,0 +1,15 @@
+<div [ngClass]="setClasses()">
+
+  <p>
+    <input type="checkbox" (change)="onToggle(todo)" /> 
+    <span *ngIf="!editTodo" (click)="toggleEditMod()">
+      {{todo.title}}
+    </span>
+    <input *ngIf="editTodo" type="text" [(ngModel)]="title">
+    <button *ngIf="editTodo" (click)="onCancel()" class="btn cancel">Cancel</button>
+    <button *ngIf="editTodo" (click)="onEdit( todo)" class="btn editTodoApprove">Edit</button>
+
+    <button (click)="onDelete(todo)" class="del">x</button>
+  </p>
+
+</div>

@@ -1,5 +1,5 @@
-<form fxLayoutAlign="center center">
-  <mat-form-field class="search-bar" appearance="outline" [style]="searchbarWidth">
+<form >
+  <mat-form-field class="search-bar" appearance="outline" >
     <mat-chip-list #chipList>
       <mat-chip style="margin-top:0.4em;" *ngFor="let option of autoCompleteService.searchOption" (removed)="removeOption(option)">
 

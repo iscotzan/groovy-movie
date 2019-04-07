@@ -1,8 +1,9 @@
-<mat-card class="jumbo-movie-card" color="primary">
+<mat-card class="jumbo-movie-card" [ngClass]="{'fadein': fadeInContent, 'fadeout': fadeOutContent }" color="primary">
   <mat-grid-list cols="5" rowHeight="80">
-    <mat-grid-tile [colspan]="1" [rowspan]="5">
+    <mat-grid-tile [colspan]="1" [rowspan]="6" fxLayout.xs="row">
       <div class="jumbo-movie-card-poster">
-        <img mat-card-image [src]="poster_url" [alt]="title">
+        <img *ngIf="!loading" mat-card-image [src]="poster_url" [alt]="title" color="accent">
+        <mat-spinner color="accent" *ngIf="loading"></mat-spinner>
       </div>
     </mat-grid-tile>
     <div class="jumbo-movie-card-content">
@@ -16,7 +17,7 @@
           </mat-card-title>
         </mat-card-header>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="4" [rowspan]="1" class="jumbo-movie-card-icon-group">
+      <mat-grid-tile [colspan]="4" [rowspan]="1" class="jumbo-movie-card-icon-group" fxLayout.xs="row">
         <div fxFlex fxLayoutAlign="start center">
           <button mat-fab color="accent">
             <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
@@ -30,7 +31,7 @@
 
         </div>
       </mat-grid-tile>
-      <mat-grid-tile [colspan]="4" [rowspan]="2">
+      <mat-grid-tile [colspan]="4" [rowspan]="3" fxLayout.xs="row">
         <div fxFlex fxLayoutAlign="start start">
           <div>
             <h2 class="jumbo-movie-card-overview-text">
@@ -39,7 +40,7 @@
             <p class="jumbo-movie-card-overview-text">
               {{overview}}
             </p>
-
+            <mat-spinner color="accent" *ngIf="loading"></mat-spinner>
           </div>
         </div>
       </mat-grid-tile>
